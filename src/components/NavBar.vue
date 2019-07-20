@@ -2,8 +2,8 @@
   <b-navbar class="px-0" :class="{ 'hidden-navbar': !showNavbar }" fixed="top" toggleable="md">
     <div class="container-fluid">
       <b-navbar-brand class="mx-4">
-        <g-link to="/agency">
-          <g-image alt="logo" immediate src="../../assets/images/logo.png" width="40" />
+        <g-link to="/">
+          <g-image alt="logo" immediate src="~/assets/images/logo.png" width="40" />
         </g-link>
       </b-navbar-brand>
 
@@ -14,25 +14,25 @@
       <b-collapse is-nav id="nav_collapse" v-model="showCollapse">
         <b-navbar-nav class="ml-auto px-4">
           <b-nav-item>
-            <g-link class="text-light" to="/agency">Home</g-link>
+            <g-link class="text-light" to="/">Home</g-link>
           </b-nav-item>
           <b-nav-item>
-            <g-link class="text-light" to="/agency/about">About</g-link>
+            <g-link class="text-light" to="/about">About</g-link>
           </b-nav-item>
           <b-nav-item>
-            <g-link class="text-light" to="/agency/websites">Websites</g-link>
+            <g-link class="text-light" to="/websites">Websites</g-link>
           </b-nav-item>
           <b-nav-item>
-            <g-link class="text-light" to="/agency/support">Support</g-link>
+            <g-link class="text-light" to="/support">Support</g-link>
           </b-nav-item>
           <b-nav-item>
-            <g-link class="text-light" to="/agency/Pricing">Pricing</g-link>
+            <g-link class="text-light" to="/Pricing">Pricing</g-link>
           </b-nav-item>
           <b-nav-item>
-            <g-link class="text-light" to="/agency/blog">Blog</g-link>
+            <g-link class="text-light" to="/blog">Blog</g-link>
           </b-nav-item>
           <b-nav-item>
-            <g-link class="text-light" to="/agency/contact">Contact</g-link>
+            <g-link class="text-light" to="/contact">Contact</g-link>
           </b-nav-item>
         </b-navbar-nav>
       </b-collapse>

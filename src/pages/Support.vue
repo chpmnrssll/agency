@@ -1,5 +1,5 @@
 <template>
-  <AgencyLayout>
+  <Layout>
     <FullScreenHero>
       <template v-slot:background>
         <g-image src="~/assets/images/hero-bg.png" alt="" immediate />
@@ -35,14 +35,14 @@
 
     <FAQ />
     <JoinTheClub />
-  </AgencyLayout>
+  </Layout>
 </template>
 
 <script>
-import FullScreenHero from '../../components/Agency/FullScreenHero.vue';
-import SupportFeatures from '../../components/Agency/SupportFeatures.vue';
-import FAQ from '../../components/Agency/FAQ.vue';
-import JoinTheClub from '../../components/Agency/JoinTheClub.vue';
+import FullScreenHero from '../components/FullScreenHero.vue';
+import SupportFeatures from '../components/SupportFeatures.vue';
+import FAQ from '../components/FAQ.vue';
+import JoinTheClub from '../components/JoinTheClub.vue';
 
 export default {
   components: {

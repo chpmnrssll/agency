@@ -1,11 +1,11 @@
 <template>
-  <AgencyLayout>
+  <Layout>
     <FullScreenHero>
       <template v-slot:background>
         <g-image src="~/assets/images/hero-bg.png" alt="" immediate />
       </template>
       <template v-slot:body>
-        <h1>Pricing</h1>
+        <h1>Websites</h1>
         <p>
           This is a simple hero unit, a simple jumbotron-style component for calling extra attention
           to featured content or information.
@@ -14,30 +14,20 @@
       </template>
     </FullScreenHero>
 
-    <Features>
-      <template v-slot:header>
-        <h2 class="font-weight-bold m-4">Features</h2>
-        <h1 class="font-weight-bold m-4">US $499 One Time Payment</h1>
-        <hr class="py-2" />
-      </template>
-    </Features>
-
-    <PricingFeatures />
+    <WebsitesLong />
     <JoinTheClub />
-  </AgencyLayout>
+  </Layout>
 </template>
 
 <script>
-import FullScreenHero from '../../components/Agency/FullScreenHero.vue';
-import Features from '../../components/Agency/Features.vue';
-import PricingFeatures from '../../components/Agency/PricingFeatures.vue';
-import JoinTheClub from '../../components/Agency/JoinTheClub.vue';
+import FullScreenHero from '../components/FullScreenHero.vue';
+import WebsitesLong from '../components/WebsitesLong.vue';
+import JoinTheClub from '../components/JoinTheClub.vue';
 
 export default {
   components: {
     FullScreenHero,
-    Features,
-    PricingFeatures,
+    WebsitesLong,
     JoinTheClub,
   },
   metaInfo: {

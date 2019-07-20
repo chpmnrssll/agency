@@ -1,24 +1,37 @@
 <template>
   <Layout>
-    <g-image immediate class="blogImage mb-4" :src="$page.post.image" :alt="$page.post.image" />
-    <div class="blogPost">
-      <h1 v-html="$page.post.title" class="mb-4" />
-      <div class="meta">
-        <div class="box author">
-          <span class="label">Author</span>
-          <span class="author-name" v-text="$page.post.author" />
-        </div>
-        <div class="box date">
-          <span class="label">Date</span>
-          <div v-text="new Date($page.post.date).toLocaleDateString()" />
-        </div>
-        <div class="box time">
-          <span class="label">Time</span>
-          <span>{{ $page.post.timeToRead }} min read</span>
-        </div>
-      </div>
+    <FullScreenHero>
+      <template v-slot:background>
+        <g-image
+          immediate
+          :overlay="true"
+          :src="$page.post.image"
+          :alt="$page.post.image"
+          v-if="$page.post.image"
+        />
+        <g-image src="~/assets/images/hero-bg.png" alt="" immediate v-else />
+      </template>
+      <template v-slot:body>
+        <h1 v-html="$page.post.title" class="mb-4" />
+      </template>
+    </FullScreenHero>
+
+    <b-container class="pb-5">
+      <b-row>
+        <b-col>
+          <b-row>
+            <span class="author-name" v-text="$page.post.author" />
+          </b-row>
+          <b-row>
+            <span v-text="new Date($page.post.date).toLocaleDateString()" />
+          </b-row>
+          <b-row>
+            <span>{{ $page.post.timeToRead }} min read</span>
+          </b-row>
+        </b-col>
+      </b-row>
       <BlogContent class="mt-5" :content="$page.post.content" />
-    </div>
+    </b-container>
   </Layout>
 </template>
 
@@ -37,10 +50,12 @@ query BlogPost($path: String!) {
 
 <script>
 import BlogContent from '../components/BlogContent.vue';
+import FullScreenHero from '../components/FullScreenHero.vue';
 
 export default {
   components: {
     BlogContent,
+    FullScreenHero,
   },
   metaInfo() {
     return {
@@ -51,20 +66,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.meta {
-  display: flex;
-}
-
-.box {
-  display: flex;
-  flex-direction: column;
-  padding: 0 20px 0 0;
-
-  .label {
-    font-weight: bold;
-  }
-}
-
 .blogImage {
   max-height: 400px;
   width: 100%;

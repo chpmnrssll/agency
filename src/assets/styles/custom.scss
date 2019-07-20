@@ -30,3 +30,6 @@ $grid-breakpoints: (
   lg: 992px,
   xl: 1300px
 );
+
+$link-color: map-get($theme-colors, "primary");
+$font-family-base: 'Nunito', sans-serif;

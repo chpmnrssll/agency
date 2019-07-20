@@ -1,10 +1,10 @@
 backend:
   name: git-gateway
-  repo: chpmnrssll/gridsome-boilerplate
+  repo: chpmnrssll/agency
   squash_merges: true
 
-media_folder: "/uploads"
-public_folder: "/uploads"
+media_folder: "/src/assets/images"
+public_folder: "/src/assets/images"
 
 collections:
   - name: "posts"
@@ -17,5 +17,5 @@ collections:
       - {label: "Excerpt", name: "excerpt", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "date"}
       - {label: "Author", name: "author", widget: "string"}
-      - {label: "Image", name: "image", widget: "file"}
+      - {label: "Image", name: "image", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}

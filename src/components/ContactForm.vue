@@ -28,14 +28,14 @@
       </div>
 
       <b-form
-        action="/agency/thanks/"
+        action="/thanks/"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
-        name="agency-contact"
+        name="contact"
         method="post"
         @submit.prevent="onSubmit"
       >
-        <input type="hidden" name="form-name" value="agency-contact" />
+        <input type="hidden" name="form-name" value="contact" />
         <input type="hidden" name="bot-field" />
 
         <b-form-group :state="validateName">

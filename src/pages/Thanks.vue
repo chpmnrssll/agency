@@ -1,33 +1,29 @@
 <template>
-  <AgencyLayout>
+  <Layout>
     <FullScreenHero>
       <template v-slot:background>
         <g-image src="~/assets/images/hero-bg.png" alt="" immediate />
       </template>
       <template v-slot:body>
-        <h1>Websites</h1>
+        <h1>Thank You</h1>
         <p>
-          This is a simple hero unit, a simple jumbotron-style component for calling extra attention
-          to featured content or information.
+          Thanks for contacting us! We will be in touch with you shortly.
         </p>
         <b-button @click="openCalendlyWidget" pill variant="primary">Schedule Meeting</b-button>
       </template>
     </FullScreenHero>
 
-    <WebsitesLong />
     <JoinTheClub />
-  </AgencyLayout>
+  </Layout>
 </template>
 
 <script>
-import FullScreenHero from '../../components/Agency/FullScreenHero.vue';
-import WebsitesLong from '../../components/Agency/WebsitesLong.vue';
-import JoinTheClub from '../../components/Agency/JoinTheClub.vue';
+import FullScreenHero from '../components/FullScreenHero.vue';
+import JoinTheClub from '../components/JoinTheClub.vue';
 
 export default {
   components: {
     FullScreenHero,
-    WebsitesLong,
     JoinTheClub,
   },
   metaInfo: {

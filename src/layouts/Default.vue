@@ -1,22 +1,20 @@
 <template>
   <div class="layout">
-    <div id="content-wrapper">
-      <Header />
-      <slot />
-    </div>
+    <NavBar />
+    <slot />
     <Footer />
   </div>
 </template>
 
 <script>
 import '../assets/styles/default.scss';
-import Footer from '../components/Default/Footer.vue';
-import Header from '../components/Default/Header.vue';
+import NavBar from '../components/NavBar.vue';
+import Footer from '../components/Footer.vue';
 
 export default {
   components: {
+    NavBar,
     Footer,
-    Header,
   },
 };
 </script>
@@ -28,8 +26,7 @@ html {
 }
 
 body {
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
-    Arial, sans-serif;
+  font-family: 'Nunito', sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.5;
@@ -39,12 +36,5 @@ body {
   display: flex;
   flex-direction: column;
   height: 100%;
-}
-
-#content-wrapper {
-  flex: 1 0 auto;
-  max-width: 950px;
-  width: 90vw;
-  margin: 0 auto;
 }
 </style>

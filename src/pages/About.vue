@@ -1,44 +1,78 @@
 <template>
   <Layout>
-    <h1 class="mb-4">About</h1>
-    <img class="about-image" src="../../uploads/profile.svg" alt="about-image" />
+    <FullScreenHero>
+      <template v-slot:background>
+        <g-image src="~/assets/images/hero-bg.png" alt="" immediate />
+      </template>
+      <template v-slot:body>
+        <h1>About</h1>
+        <p>
+          This is a simple hero unit, a simple jumbotron-style component for calling extra attention
+          to featured content or information.
+        </p>
+        <b-button @click="openCalendlyWidget" pill variant="primary">Schedule Meeting</b-button>
+      </template>
+    </FullScreenHero>
 
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipiscing elit, platea elementum mus lectus molestie
-      et. Conubia taciti nunc proin vehicula et nascetur lacinia commodo non, penatibus vel dui
-      pharetra inceptos himenaeos orci viverra ad, quis ullamcorper sit scelerisque nibh praesent
-      imperdiet vulputate.
-    </p>
+    <OurTeam />
 
-    <p>
-      Eros morbi himenaeos eget sagittis parturient, netus sapien pharetra semper iaculis orci,
-      elementum ullamcorper eleifend aenean. Orci ligula euismod taciti conubia facilisis mattis
-      laoreet, cras aliquam ultrices purus augue morbi, a litora feugiat dapibus per lacinia.
-    </p>
+    <FullScreenHero :overlay="true">
+      <template v-slot:background>
+        <g-image src="~/assets/images/bg-5.jpg" alt="" />
+      </template>
+      <template v-slot:body>
+        <h2>CLASS APTEN</h2>
+        <h1>A Bit of History</h1>
+        <hr class="my-4" />
+        <p>
+          WEB_Studio was founded on principles of high standards, ethics, and genuine customer
+          service.&nbsp;Proin gravida velit auctor aliquet aenean sollicitudin, lorem quis bibendum
+          auctor consequat ipsum nec sagittis vulputate cursus a sit amet mauris morbi accumsan
+          ipsum velit. Nam tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat
+          consequat auctor eu in elit. Class aptent taciti sociosqu ad litora torquent per conubia
+          nostra, per inceptos himenaeos. Mauris in erat justo.
+        </p>
+        <b-button @click="openCalendlyWidget" pill variant="primary">Schedule Meeting</b-button>
+      </template>
+    </FullScreenHero>
 
-    <p>
-      Conubia non mi vulputate natoque nullam sem nascetur fames felis, hendrerit imperdiet pretium
-      urna a augue nec quis lorem, orci sed vehicula pulvinar viverra nam lacus porttitor. Praesent
-      id elementum aliquet dolor himenaeos primis urna vestibulum, molestie sagittis cursus facilisi
-      tellus phasellus lacinia, viverra porttitor tincidunt tortor habitasse class luctus.
-    </p>
+    <Testimonials />
+    <JoinTheClub />
   </Layout>
 </template>
 
 <script>
+import FullScreenHero from '../components/FullScreenHero.vue';
+import OurTeam from '../components/OurTeam.vue';
+import Testimonials from '../components/Testimonials.vue';
+import JoinTheClub from '../components/JoinTheClub.vue';
+
 export default {
+  components: {
+    FullScreenHero,
+    OurTeam,
+    Testimonials,
+    JoinTheClub,
+  },
   metaInfo: {
     title: 'About',
+  },
+  methods: {
+    openCalendlyWidget() {
+      window.Calendly.initPopupWidget({ url: 'https://calendly.com/chpmnrssll' });
+    },
   },
 };
 </script>
 
-<style lang="scss" scoped>
-.about-image {
-  display: block;
-  margin: auto;
-  width: 90%;
-  max-width: 500px;
-  padding-bottom: 50px;
+<style lang="scss">
+:root {
+  --primaryBlue: #0f4ea5;
+  --primaryBlueA: #0f4ea588;
+  --primaryGreen: #0fa597;
+  --primaryGreenA: #0fa59788;
+}
+section {
+  transition: 0.25s filter ease-in-out;
 }
 </style>

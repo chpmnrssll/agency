@@ -1,9 +1,14 @@
 /* eslint no-param-reassign: "error" */
 
 module.exports = {
-  siteName: 'Gridsome starter bootstrap',
-  siteDescription: 'A starter project for Gridsome with Bootstrap and some other useful tools.',
-  siteUrl: 'https://gridsome-boilerplate.netlify.com/',
+  siteName: 'Agency',
+  siteDescription: 'Agency site built in Gridsome',
+  siteUrl: 'https://agency-gridsome.netlify.com/',
+  metaData: {
+    siteName: 'Agency',
+    siteDescription: 'Agency site built in Gridsome',
+    siteUrl: 'https://agency-gridsome.netlify.com/',
+  },
   plugins: [
     {
       use: '@gridsome/source-filesystem',
@@ -17,12 +22,13 @@ module.exports = {
         },
       },
     },
-    // {
-    //   use: `gridsome-plugin-netlify-cms`,
-    //   options: {
-    //     publicPath: `/admin`,
-    //   },
-    // },
+    {
+      use: `gridsome-plugin-netlify-cms`,
+      options: {
+        publicPath: `/admin`,
+        modulePath: 'src/admin/index.js',
+      },
+    },
     {
       use: '@gridsome/plugin-google-analytics',
       options: {
@@ -71,6 +77,10 @@ module.exports = {
 
         return options;
       });
+
+    const svgRule = config.module.rule('svg');
+    svgRule.uses.clear();
+    svgRule.use('vue-svg-loader').loader('vue-svg-loader');
   },
   css: {
     loaderOptions: {
