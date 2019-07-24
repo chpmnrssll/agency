@@ -1,11 +1,16 @@
 <template>
   <section class="d-flex flex-column justify-content-around">
     <div class="container text-center">
-      <h2 class="font-weight-bold mb-4">Values</h2>
-      <h1 class="font-weight-bold mb-4">Flexibility & Freedom</h1>
+      <h2 class="font-weight-bold mb-4">{{ homeData.values.subHeader }}</h2>
+      <h1 class="font-weight-bold mb-4">{{ homeData.values.header }}</h1>
       <hr class="my-4" />
       <SequentialEntrance animation="entranceFromTop" class-name="row py-4">
-        <div class="col-sm text-center">
+        <b-col class="text-center" v-for="value in homeData.values.list" :key="value.name">
+          <!-- <g-image class="pb-4" :src="value.image" :alt="value.name" /> -->
+          <h3 class="pb-2">{{ value.name }}</h3>
+          <p>{{ value.text }}</p>
+        </b-col>
+        <!-- <div class="col-sm text-center">
           <g-image class="pb-4" src="~/assets/images/freedom-icon.png" alt="Freedom" />
           <h3 class="pb-2">Freedom</h3>
           <p>
@@ -28,7 +33,7 @@
             Proin gravida velit auctor aliquet aenean sollicitudin, lorem quis bibendum auctor
             consequat ipsum nec.
           </p>
-        </div>
+        </div> -->
       </SequentialEntrance>
     </div>
   </section>
@@ -36,10 +41,29 @@
 
 <script>
 import SequentialEntrance from './SequentialEntrance.vue';
+import homeData from '../data/home.yml';
 
 export default {
   components: {
     SequentialEntrance,
+  },
+  data() {
+    return {
+      homeData,
+    };
+  },
+  computed: {
+    images() {
+      const images = [];
+      Array.from(homeData.values.list).forEach(value => {
+        images.push(import(value.image));
+      });
+
+      return images;
+    },
+  },
+  mounted() {
+    // console.log(this.images);
   },
 };
 </script>

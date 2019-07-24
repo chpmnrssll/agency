@@ -1,0 +1,17 @@
+title: "Ad Value Development"
+header: "Instant JAMstack Websites"
+subHeader: "This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information."
+buttonText: "Schedule Consultation"
+values:
+  header: "Flexibility & Freedom"
+  subHeader: "Values"
+  list:
+    - name: "Freedom"
+      text: "Proin gravida velit auctor aliquet aenean sollicitudin, lorem quis bibendum auctor consequat ipsum nec."
+      image: "/src/assets/images/freedom-icon.png"
+    - name: "You Own It"
+      text: "Proin gravida velit auctor aliquet aenean sollicitudin, lorem quis bibendum auctor consequat ipsum nec."
+      image: "/src/assets/images/you-own-it-icon.png"
+    - name: "Flexibility"
+      text: "Proin gravida velit auctor aliquet aenean sollicitudin, lorem quis bibendum auctor consequat ipsum nec."
+      image: "/src/assets/images/flexibility-icon.png"
