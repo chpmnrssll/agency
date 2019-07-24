@@ -100,7 +100,7 @@ export default {
     blurBackground(val) {
       document
         .getElementById('app')
-        .querySelectorAll('section')
+        .querySelectorAll('section, footer')
         .forEach(el => {
           el.style.filter = val ? 'blur(8px)' : '';
         });
