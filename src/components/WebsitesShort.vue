@@ -105,7 +105,7 @@ h2 {
   font-size: 100%;
 }
 h3 {
-  color: var(--primaryGreen);
+  color: var(--primaryBlue);
   font-size: 100%;
   text-transform: uppercase;
 }
