@@ -87,10 +87,11 @@ export default {
       updateUser: 'updateUser',
     }),
     onScroll() {
-      if (window.pageYOffset < 0) {
-        return;
-      }
-      if (Math.abs(window.pageYOffset - this.lastScrollPosition) < OFFSET) {
+      if (
+        this.showCollapse ||
+        window.pageYOffset < 0 ||
+        Math.abs(window.pageYOffset - this.lastScrollPosition) < OFFSET
+      ) {
         return;
       }
       this.showNavbar = window.pageYOffset < this.lastScrollPosition;
