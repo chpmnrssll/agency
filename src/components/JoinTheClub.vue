@@ -31,32 +31,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss" scoped>
-section {
-  flex: 1 0 auto;
-  min-height: 100%;
-  width: 100%;
-}
-h1 {
-  font-family: 'Nunito', sans-serif;
-  font-size: 2.3125rem;
-  font-weight: 700;
-}
-h2 {
-  font-family: 'Nunito', sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-hr {
-  border-top-style: solid;
-  border-top-width: 3px;
-  border-top-color: #ffffff;
-  width: 40px;
-}
-p {
-  font-family: 'Nunito', sans-serif;
-  font-size: 100%;
-}
-</style>

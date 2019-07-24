@@ -80,60 +80,30 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-section {
-  flex: 1 0 auto;
-  min-height: 100%;
-  width: 100%;
+.container {
+  padding: 120px 0;
+}
 
-  .animation-hover-float {
-    transition-duration: 0.25s;
-    transition-property: transform;
-    transition-timing-function: ease-out;
-
-    &:active,
-    &:focus,
-    &:hover {
-      transform: translateY(-8px);
-    }
-  }
-
-  .container {
-    padding: 120px 0;
-  }
-
-  .g-image {
-    border-radius: 5px 5px 5px 5px;
-    max-width: 80vw;
-    max-height: 100%;
-  }
-
-  h1 {
-    color: var(--primaryBlue);
-    font-family: 'Nunito', sans-serif;
-    font-size: 2.3125rem;
-  }
-  h2 {
-    color: var(--primaryGreen);
-    font-family: 'Nunito', sans-serif;
-    font-size: 1rem;
-    text-transform: uppercase;
-  }
-  h3 {
-    color: var(--primaryGreen);
-    font-family: 'Nunito', sans-serif;
-    font-size: 100%;
-    text-transform: uppercase;
-  }
-  hr {
-    border-top-style: solid;
-    border-top-width: 3px;
-    border-top-color: var(--primaryGreen);
-    width: 40px;
-  }
-  p {
-    color: #8192aa;
-    font-family: 'Nunito', sans-serif;
-    font-size: 100%;
-  }
+.g-image {
+  border-radius: 5px 5px 5px 5px;
+  max-width: 80vw;
+  max-height: 100%;
+}
+h1 {
+  color: var(--primaryBlue);
+}
+h2 {
+  color: var(--primaryGreen);
+}
+h3 {
+  color: var(--primaryGreen);
+  font-size: 100%;
+  text-transform: uppercase;
+}
+hr {
+  border-top-color: var(--primaryGreen);
+}
+p {
+  color: #8192aa;
 }
 </style>

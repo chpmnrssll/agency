@@ -52,52 +52,37 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+h1 {
+  color: var(--primaryBlue);
+}
+h2 {
+  color: var(--primaryGreen);
+  font-size: 100%;
+}
+h3 {
+  color: var(--primaryGreen);
+  font-size: 1.8125rem;
+}
+h4 {
+  color: var(--primaryBlue);
+  font-size: 0.9375rem;
+}
+hr {
+  border-top-color: var(--primaryGreen);
+}
+p {
+  color: #8192aa;
+}
 section {
   background-color: #f7f9fb;
-  flex: 1 0 auto;
-  min-height: 100%;
-  width: 100%;
-
-  .col {
-    background-color: #ffffff;
-    box-shadow: 0px 30px 70px -30px var(--primaryBlueA);
-    min-width: 18.75rem;
-  }
-  .g-image {
-    border-radius: 100px;
-    box-shadow: 0px 15px 30px -5px var(--primaryBlueA);
-  }
-  h1 {
-    color: var(--primaryBlue);
-    font-family: 'Nunito', sans-serif;
-    font-size: 2.3125rem;
-  }
-  h2 {
-    color: var(--primaryGreen);
-    font-family: 'Nunito', sans-serif;
-    font-size: 1rem;
-    text-transform: uppercase;
-  }
-  h3 {
-    color: var(--primaryGreen);
-    font-family: 'Nunito', sans-serif;
-    font-size: 1.8125rem;
-  }
-  h4 {
-    color: var(--primaryBlue);
-    font-family: 'Nunito', sans-serif;
-    font-size: 0.9375rem;
-  }
-  hr {
-    border-top-style: solid;
-    border-top-width: 3px;
-    border-top-color: var(--primaryGreen);
-    width: 40px;
-  }
-  p {
-    color: #8192aa;
-    font-family: 'Nunito', sans-serif;
-    font-size: 100%;
-  }
+}
+.col {
+  background-color: #ffffff;
+  box-shadow: 0px 30px 70px -30px var(--primaryBlueA);
+  min-width: 18.75rem;
+}
+.g-image {
+  border-radius: 100px;
+  box-shadow: 0px 15px 30px -5px var(--primaryBlueA);
 }
 </style>

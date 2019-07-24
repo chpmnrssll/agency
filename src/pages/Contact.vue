@@ -40,15 +40,3 @@ export default {
   },
 };
 </script>
-
-<style lang="scss">
-:root {
-  --primaryBlue: #0f4ea5;
-  --primaryBlueA: #0f4ea588;
-  --primaryGreen: #0fa597;
-  --primaryGreenA: #0fa59788;
-}
-section {
-  transition: 0.25s filter ease-in-out;
-}
-</style>

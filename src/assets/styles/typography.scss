@@ -28,3 +28,31 @@
        url('/assets/fonts/nunito-v10-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
        url('/assets/fonts/nunito-v10-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
+
+h1 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 2.3125rem;
+  font-weight: 700;
+}
+h2 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+h3 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.75rem;
+}
+h4 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.9375rem;
+}
+p {
+  font-family: 'Nunito', sans-serif;
+  font-size: 100%;
+}
+.btn {
+  font-family: 'Nunito', sans-serif;
+  font-size: 100%;
+}

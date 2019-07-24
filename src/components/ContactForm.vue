@@ -165,37 +165,21 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-section {
-  flex: 1 0 auto;
-  min-height: 100%;
-  width: 100%;
-}
 h1 {
   color: var(--primaryBlue);
-  font-family: 'Nunito', sans-serif;
-  font-size: 2.3125rem;
 }
 h2 {
   color: var(--primaryGreen);
-  font-family: 'Nunito', sans-serif;
-  font-size: 1rem;
-  text-transform: uppercase;
+  font-size: 100%;
 }
 h3 {
   color: var(--primaryBlue);
-  font-family: 'Nunito', sans-serif;
-  font-size: 1.75rem;
 }
 hr {
-  border-top-style: solid;
-  border-top-width: 3px;
   border-top-color: var(--primaryGreen);
-  width: 40px;
 }
 p {
   color: #8192aa;
-  font-family: 'Nunito', sans-serif;
-  font-size: 100%;
 }
 label {
   color: #8192aa;

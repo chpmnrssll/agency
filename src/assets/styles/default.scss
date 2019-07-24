@@ -1,6 +1,22 @@
+@import 'animations.scss';
 @import 'custom.scss';
 @import 'calendlyWidget.scss';
 @import 'transitions.scss';
 @import 'typography.scss';
+@import 'variables.scss';
 @import 'node_modules/bootstrap/scss/bootstrap';
 @import 'node_modules/bootstrap-vue/src/index.scss';
+
+hr {
+  border-top-style: solid;
+  border-top-width: 3px;
+  border-top-color: white;
+  width: 40px;
+}
+
+section {
+  flex: 1 0 auto;
+  min-height: 100%;
+  transition: 0.25s filter ease-in-out; // for blur filter transition under mobile navbar
+  width: 100%;
+}

@@ -47,47 +47,30 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+h1 {
+  color: var(--primaryBlue);
+}
+h2 {
+  color: var(--primaryGreen);
+  font-size: 100%;
+}
+h3 {
+  color: var(--primaryGreen);
+  font-size: 1.3125rem;
+}
+h4 {
+  color: var(--primaryBlue);
+}
+hr {
+  border-top-color: var(--primaryGreen);
+}
 section {
   background-color: #f7f9fb;
-  flex: 1 0 auto;
-  min-height: 100%;
-  width: 100%;
-
-  .container {
-    padding: 120px 0;
-  }
-
-  h1 {
-    color: var(--primaryBlue);
-    font-family: 'Nunito', sans-serif;
-    font-size: 2.3125rem;
-  }
-  h2 {
-    color: var(--primaryGreen);
-    font-family: 'Nunito', sans-serif;
-    font-size: 1rem;
-    text-transform: uppercase;
-  }
-  h3 {
-    color: var(--primaryGreen);
-    font-family: 'Nunito', sans-serif;
-    font-size: 1.3125rem;
-  }
-  h4 {
-    color: var(--primaryBlue);
-    font-family: 'Nunito', sans-serif;
-    font-size: 0.9375rem;
-  }
-  hr {
-    border-top-style: solid;
-    border-top-width: 3px;
-    border-top-color: var(--primaryGreen);
-    width: 40px;
-  }
-  p {
-    color: #8192aa;
-    font-family: 'Nunito', sans-serif;
-    font-size: 100%;
-  }
+}
+p {
+  color: #8192aa;
+}
+.container {
+  padding: 120px 0;
 }
 </style>

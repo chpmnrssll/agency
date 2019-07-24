@@ -1,0 +1,11 @@
+.animation-hover-float {
+  transition-duration: 0.25s;
+  transition-property: transform;
+  transition-timing-function: ease-out;
+
+  &:active,
+  &:focus,
+  &:hover {
+    transform: translateY(-8px);
+  }
+}

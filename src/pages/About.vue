@@ -21,7 +21,7 @@
         <g-image src="~/assets/images/bg-5.jpg" alt="" />
       </template>
       <template v-slot:body>
-        <h2>CLASS APTEN</h2>
+        <h2 class="font-weight-bold">CLASS APTEN</h2>
         <h1>A Bit of History</h1>
         <hr class="my-4" />
         <p>
@@ -65,14 +65,8 @@ export default {
 };
 </script>
 
-<style lang="scss">
-:root {
-  --primaryBlue: #0f4ea5;
-  --primaryBlueA: #0f4ea588;
-  --primaryGreen: #0fa597;
-  --primaryGreenA: #0fa59788;
-}
-section {
-  transition: 0.25s filter ease-in-out;
+<style lang="scss" scoped>
+h2 {
+  font-size: 100%;
 }
 </style>
