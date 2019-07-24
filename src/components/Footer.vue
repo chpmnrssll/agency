@@ -33,7 +33,7 @@
             <g-link to="/about">Credits</g-link>
           </div>
           <div class="col-lg text-right p-0">
-            <g-link to="/admin" v-if="footerData.netlifyCMSLink">Netlify CMS</g-link>
+            <a href="/admin" v-if="footerData.netlifyCMSLink">Netlify CMS</a>
           </div>
         </div>
       </div>
