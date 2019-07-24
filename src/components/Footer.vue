@@ -1,42 +1,44 @@
 <template>
-  <footer class="">
-    <div class="outer-container container-fluid px-5">
-      <div class="row">
-        <div class="about-us col-lg-6 my-5">
-          <h3 class="mb-4">About Us</h3>
-          <p>{{ footerData.text }}</p>
-        </div>
-        <div class="col-lg-3 my-5">
-          <h3 class="mb-4">Our Services</h3>
-          <div class="d-flex flex-column services">
-            <g-link v-for="service in footerData.services" :to="service.href">
-              {{ service.name }}
-            </g-link>
+  <section>
+    <footer>
+      <div class="outer-container container-fluid px-5">
+        <div class="row">
+          <div class="about-us col-lg-6 my-5">
+            <h3 class="mb-4">About Us</h3>
+            <p>{{ footerData.text }}</p>
+          </div>
+          <div class="col-lg-3 my-5">
+            <h3 class="mb-4">Our Services</h3>
+            <div class="d-flex flex-column services">
+              <g-link v-for="service in footerData.services" :to="service.href">
+                {{ service.name }}
+              </g-link>
+            </div>
+          </div>
+          <div class="col-lg-3 my-5">
+            <h3 class="mb-4">Ad Value Development</h3>
+            <address class="d-flex flex-column">
+              <span>123 Fifth Avenue, CO 10160</span>
+              <a href="mailto:web@studio.com">web@studio.com</a>
+              <a href="tel:+13115552368">(311) 555-2368</a>
+            </address>
           </div>
         </div>
-        <div class="col-lg-3 my-5">
-          <h3 class="mb-4">Ad Value Development</h3>
-          <address class="d-flex flex-column">
-            <span>123 Fifth Avenue, CO 10160</span>
-            <a href="mailto:web@studio.com">web@studio.com</a>
-            <a href="tel:+13115552368">(311) 555-2368</a>
-          </address>
+      </div>
+      <div class="bottom container-fluid p-0 p-lg-5">
+        <div class="row d-flex justify-content-between m-0 m-lg-2">
+          <div class="col-lg mb-5 mb-lg-0 p-0">
+            <span>Copyright © 2019 Ad Value Development</span>
+            <span>&nbsp;|&nbsp;</span>
+            <g-link to="/about">Credits</g-link>
+          </div>
+          <div class="col-lg text-right p-0">
+            <g-link to="/admin" v-if="footerData.netlifyCMSLink">Netlify CMS</g-link>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="bottom container-fluid p-0 p-lg-5">
-      <div class="row d-flex justify-content-between m-0 m-lg-2">
-        <div class="col-lg mb-5 mb-lg-0 p-0">
-          <span>Copyright © 2019 Ad Value Development</span>
-          <span>&nbsp;|&nbsp;</span>
-          <g-link to="/about">Credits</g-link>
-        </div>
-        <div class="col-lg text-right p-0">
-          <g-link to="/admin" v-if="footerData.netlifyCMSLink">Netlify CMS</g-link>
-        </div>
-      </div>
-    </div>
-  </footer>
+    </footer>
+  </section>
 </template>
 
 <script>
